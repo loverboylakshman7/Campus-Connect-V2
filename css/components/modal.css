@@ -1,0 +1,440 @@
+/* =========================================
+   CAMPUS CONNECT V2
+   MODAL COMPONENT SYSTEM
+   Responsive + accessible + reusable
+   ========================================= */
+
+
+/* =========================================
+   MODAL OVERLAY
+   ========================================= */
+
+.modal {
+  position: fixed;
+  inset: 0;
+
+  z-index: var(--z-modal);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: var(--space-4);
+
+  background: var(--color-overlay);
+
+  opacity: 0;
+  visibility: hidden;
+
+  overflow-y: auto;
+
+  transition:
+    opacity var(--transition-normal),
+    visibility var(--transition-normal);
+}
+
+
+/* Active modal */
+
+.modal.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+/* =========================================
+   MODAL DIALOG
+   ========================================= */
+
+.modal__dialog {
+  width: 100%;
+  max-width: 32rem;
+
+  position: relative;
+
+  margin: auto;
+
+  background: var(--color-surface);
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+
+  box-shadow: var(--shadow-xl);
+
+  transform: translateY(1rem) scale(0.98);
+
+  transition:
+    transform var(--transition-normal),
+    background-color var(--transition-normal);
+
+  overflow: hidden;
+}
+
+
+/* Open animation */
+
+.modal.is-open .modal__dialog {
+  transform: translateY(0) scale(1);
+}
+
+
+/* =========================================
+   MODAL SIZES
+   ========================================= */
+
+
+/* Small */
+
+.modal__dialog--sm {
+  max-width: 24rem;
+}
+
+
+/* Medium */
+
+.modal__dialog--md {
+  max-width: 32rem;
+}
+
+
+/* Large */
+
+.modal__dialog--lg {
+  max-width: 48rem;
+}
+
+
+/* Extra Large */
+
+.modal__dialog--xl {
+  max-width: 72rem;
+}
+
+
+/* Full width */
+
+.modal__dialog--full {
+  width: 100%;
+  max-width: none;
+}
+
+
+/* =========================================
+   MODAL HEADER
+   ========================================= */
+
+.modal__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: var(--space-4);
+
+  padding: var(--space-5);
+
+  border-bottom: 1px solid var(--color-border);
+}
+
+
+.modal__header-content {
+  min-width: 0;
+}
+
+
+/* =========================================
+   MODAL TITLE
+   ========================================= */
+
+.modal__title {
+  color: var(--color-text-primary);
+
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+
+  line-height: var(--line-height-tight);
+}
+
+
+.modal__subtitle {
+  margin-top: var(--space-2);
+
+  color: var(--color-text-secondary);
+
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-normal);
+}
+
+
+/* =========================================
+   CLOSE BUTTON
+   ========================================= */
+
+.modal__close {
+  width: var(--touch-target-min);
+  height: var(--touch-target-min);
+
+  min-width: var(--touch-target-min);
+
+  display: grid;
+  place-items: center;
+
+  border-radius: var(--radius-md);
+
+  color: var(--color-text-secondary);
+
+  transition:
+    color var(--transition-fast),
+    background-color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+
+.modal__close:hover {
+  color: var(--color-text-primary);
+  background: var(--color-surface-secondary);
+}
+
+
+.modal__close:active {
+  transform: scale(0.95);
+}
+
+
+.modal__close svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+
+/* =========================================
+   MODAL BODY
+   ========================================= */
+
+.modal__body {
+  max-height: min(70vh, 42rem);
+  max-height: min(70dvh, 42rem);
+
+  padding: var(--space-5);
+
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+
+/* =========================================
+   MODAL FOOTER
+   ========================================= */
+
+.modal__footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  gap: var(--space-3);
+
+  flex-wrap: wrap;
+
+  padding: var(--space-4) var(--space-5);
+
+  border-top: 1px solid var(--color-border);
+
+  background: var(--color-surface);
+}
+
+
+/* =========================================
+   MODAL WITHOUT SECTIONS
+   ========================================= */
+
+.modal__content {
+  padding: var(--space-5);
+}
+
+
+/* =========================================
+   CONFIRMATION MODAL
+   ========================================= */
+
+.modal--confirm .modal__dialog {
+  max-width: 28rem;
+}
+
+
+.modal__confirm-icon {
+  width: 3.5rem;
+  height: 3.5rem;
+
+  display: grid;
+  place-items: center;
+
+  margin-bottom: var(--space-4);
+
+  border-radius: var(--radius-full);
+
+  color: var(--color-primary);
+  background: var(--color-primary-light);
+}
+
+
+.modal__confirm-icon svg {
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+
+/* Danger confirmation */
+
+.modal__confirm-icon--danger {
+  color: var(--color-danger);
+
+  background:
+    rgba(220, 38, 38, 0.12);
+}
+
+
+/* Warning confirmation */
+
+.modal__confirm-icon--warning {
+  color: var(--color-warning);
+
+  background:
+    rgba(245, 158, 11, 0.14);
+}
+
+
+/* Success confirmation */
+
+.modal__confirm-icon--success {
+  color: var(--color-success);
+
+  background:
+    rgba(22, 163, 74, 0.12);
+}
+
+
+/* =========================================
+   MOBILE FULLSCREEN MODAL OPTION
+   ========================================= */
+
+@media (max-width: 479px) {
+
+  .modal {
+    align-items: flex-end;
+
+    padding: 0;
+  }
+
+  .modal__dialog {
+    max-width: none;
+
+    min-height: auto;
+
+    border-bottom: none;
+
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+
+    transform: translateY(100%);
+  }
+
+  .modal.is-open .modal__dialog {
+    transform: translateY(0);
+  }
+
+  .modal__header {
+    padding: var(--space-4);
+  }
+
+  .modal__body {
+    max-height: 70dvh;
+
+    padding: var(--space-4);
+  }
+
+  .modal__footer {
+    flex-direction: column-reverse;
+    align-items: stretch;
+
+    padding: var(--space-4);
+  }
+
+  .modal__footer .btn {
+    width: 100%;
+  }
+
+  .modal__content {
+    padding: var(--space-4);
+  }
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (min-width: 640px) {
+
+  .modal {
+    padding: var(--space-6);
+  }
+
+  .modal__header {
+    padding: var(--space-6);
+  }
+
+  .modal__body {
+    padding: var(--space-6);
+  }
+
+  .modal__footer {
+    padding:
+      var(--space-4)
+      var(--space-6);
+  }
+}
+
+
+/* =========================================
+   LARGE DESKTOP
+   ========================================= */
+
+@media (min-width: 1280px) {
+
+  .modal__dialog--xl {
+    max-width: 80rem;
+  }
+
+  .modal__body {
+    max-height: min(75vh, 50rem);
+    max-height: min(75dvh, 50rem);
+  }
+}
+
+
+/* =========================================
+   BODY SCROLL LOCK
+   Add this class with JavaScript when a modal
+   is open.
+   ========================================= */
+
+body.modal-open {
+  overflow: hidden;
+}
+
+
+/* =========================================
+   REDUCED MOTION
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .modal,
+  .modal__dialog,
+  .modal__close {
+    transition: none;
+  }
+
+  .modal__close:active {
+    transform: none;
+  }
+}

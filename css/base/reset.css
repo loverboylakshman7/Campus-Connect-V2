@@ -1,0 +1,214 @@
+/* =========================================
+   CAMPUS CONNECT V2
+   CSS RESET
+   Consistent behaviour across all devices
+   ========================================= */
+
+
+/* -----------------------------------------
+   BOX SIZING
+   ----------------------------------------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+/* -----------------------------------------
+   REMOVE DEFAULT MARGINS
+   ----------------------------------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* -----------------------------------------
+   HTML
+   ----------------------------------------- */
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+
+/* -----------------------------------------
+   BODY
+   ----------------------------------------- */
+
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+  line-height: 1.5;
+}
+
+
+/* -----------------------------------------
+   TYPOGRAPHY
+   ----------------------------------------- */
+
+body,
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+
+/* -----------------------------------------
+   HEADINGS
+   ----------------------------------------- */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+
+/* -----------------------------------------
+   LINKS
+   ----------------------------------------- */
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+/* -----------------------------------------
+   LISTS
+   ----------------------------------------- */
+
+ul,
+ol {
+  list-style: none;
+}
+
+
+/* -----------------------------------------
+   IMAGES AND MEDIA
+   ----------------------------------------- */
+
+img,
+picture,
+svg,
+video,
+canvas {
+  display: block;
+  max-width: 100%;
+}
+
+
+/* Prevent images from stretching */
+
+img {
+  height: auto;
+}
+
+
+/* -----------------------------------------
+   FORM ELEMENTS
+   ----------------------------------------- */
+
+button,
+input,
+textarea,
+select {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+
+button {
+  cursor: pointer;
+}
+
+
+textarea {
+  resize: vertical;
+}
+
+
+/* -----------------------------------------
+   TABLES
+   ----------------------------------------- */
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+/* -----------------------------------------
+   HIDDEN ATTRIBUTE
+   ----------------------------------------- */
+
+[hidden] {
+  display: none !important;
+}
+
+
+/* -----------------------------------------
+   ACCESSIBILITY
+   ----------------------------------------- */
+
+:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+
+/* -----------------------------------------
+   REDUCED MOTION
+   ----------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+
+/* -----------------------------------------
+   MOBILE TOUCH IMPROVEMENTS
+   ----------------------------------------- */
+
+button,
+a,
+input,
+select,
+textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+/* -----------------------------------------
+   SAFER TEXT WRAPPING
+   ----------------------------------------- */
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}

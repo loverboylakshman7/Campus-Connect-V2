@@ -1,0 +1,492 @@
+/* =========================================
+   CAMPUS CONNECT V2
+   RESPONSIVE SIDEBAR COMPONENT
+   Mobile drawer + Desktop fixed sidebar
+   ========================================= */
+
+
+/* -----------------------------------------
+   SIDEBAR OVERLAY
+   Used on mobile and tablet
+   ----------------------------------------- */
+
+.sidebar-overlay {
+  position: fixed;
+  inset: 0;
+
+  z-index: var(--z-overlay);
+
+  background: var(--color-overlay);
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition:
+    opacity var(--transition-normal),
+    visibility var(--transition-normal);
+}
+
+.sidebar-overlay.is-visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+/* -----------------------------------------
+   SIDEBAR
+   Mobile-first: hidden drawer
+   ----------------------------------------- */
+
+.sidebar {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+  bottom: 0;
+
+  z-index: var(--z-sidebar);
+
+  width: min(
+    var(--sidebar-width),
+    calc(100vw - var(--space-8))
+  );
+
+  display: flex;
+  flex-direction: column;
+
+  color: var(--color-text-primary);
+  background: var(--color-surface);
+
+  border-right: 1px solid var(--color-border);
+
+  transform: translateX(-105%);
+
+  transition:
+    transform var(--transition-normal),
+    background-color var(--transition-normal);
+
+  overflow-y: auto;
+  overscroll-behavior: contain;
+
+  box-shadow: var(--shadow-xl);
+}
+
+
+/* Open mobile sidebar */
+
+.sidebar.is-open {
+  transform: translateX(0);
+}
+
+
+/* -----------------------------------------
+   SIDEBAR HEADER
+   ----------------------------------------- */
+
+.sidebar__header {
+  min-height: var(--header-height);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: var(--space-3);
+
+  padding:
+    var(--space-3)
+    var(--space-4);
+
+  border-bottom: 1px solid var(--color-border);
+}
+
+
+/* -----------------------------------------
+   BRAND
+   ----------------------------------------- */
+
+.sidebar__brand {
+  display: flex;
+  align-items: center;
+
+  min-width: 0;
+
+  gap: var(--space-3);
+}
+
+
+.sidebar__logo {
+  width: 2.5rem;
+  height: 2.5rem;
+
+  flex-shrink: 0;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: var(--radius-lg);
+
+  color: var(--color-text-inverse);
+  background: var(--color-primary);
+
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+}
+
+
+.sidebar__brand-text {
+  min-width: 0;
+}
+
+
+.sidebar__brand-name {
+  display: block;
+
+  color: var(--color-text-primary);
+
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+.sidebar__brand-subtitle {
+  display: block;
+
+  margin-top: var(--space-1);
+
+  color: var(--color-text-muted);
+
+  font-size: var(--font-size-xs);
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+/* -----------------------------------------
+   CLOSE BUTTON
+   Mobile only by default
+   ----------------------------------------- */
+
+.sidebar__close {
+  width: var(--touch-target-min);
+  height: var(--touch-target-min);
+
+  flex-shrink: 0;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: var(--radius-md);
+
+  color: var(--color-text-secondary);
+
+  transition:
+    color var(--transition-fast),
+    background-color var(--transition-fast);
+}
+
+
+.sidebar__close:hover {
+  color: var(--color-text-primary);
+  background: var(--color-surface-secondary);
+}
+
+
+/* -----------------------------------------
+   NAVIGATION
+   ----------------------------------------- */
+
+.sidebar__nav {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: var(--space-6);
+
+  padding:
+    var(--space-4)
+    var(--space-3);
+}
+
+
+/* -----------------------------------------
+   NAVIGATION GROUP
+   ----------------------------------------- */
+
+.sidebar__nav-group {
+  display: flex;
+  flex-direction: column;
+
+  gap: var(--space-1);
+}
+
+
+.sidebar__nav-label {
+  padding:
+    0
+    var(--space-3);
+
+  margin-bottom: var(--space-2);
+
+  color: var(--color-text-muted);
+
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+
+/* -----------------------------------------
+   NAVIGATION LINK
+   ----------------------------------------- */
+
+.sidebar__link {
+  min-height: var(--touch-target-min);
+
+  display: flex;
+  align-items: center;
+
+  gap: var(--space-3);
+
+  padding:
+    var(--space-2)
+    var(--space-3);
+
+  border-radius: var(--radius-md);
+
+  color: var(--color-text-secondary);
+
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+
+  transition:
+    color var(--transition-fast),
+    background-color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+
+.sidebar__link:hover {
+  color: var(--color-primary);
+  background: var(--color-primary-light);
+}
+
+
+/* Active page */
+
+.sidebar__link.is-active {
+  color: var(--color-primary);
+  background: var(--color-primary-light);
+  font-weight: var(--font-weight-semibold);
+}
+
+
+/* -----------------------------------------
+   NAVIGATION ICON
+   ----------------------------------------- */
+
+.sidebar__link-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+
+  flex-shrink: 0;
+
+  display: grid;
+  place-items: center;
+
+  font-size: var(--font-size-md);
+}
+
+
+.sidebar__link-text {
+  min-width: 0;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+/* -----------------------------------------
+   SIDEBAR FOOTER
+   ----------------------------------------- */
+
+.sidebar__footer {
+  padding: var(--space-3);
+
+  border-top: 1px solid var(--color-border);
+}
+
+
+/* -----------------------------------------
+   USER CARD
+   ----------------------------------------- */
+
+.sidebar__user {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  gap: var(--space-3);
+
+  padding: var(--space-3);
+
+  border-radius: var(--radius-lg);
+
+  transition:
+    background-color var(--transition-fast);
+}
+
+
+.sidebar__user:hover {
+  background: var(--color-surface-secondary);
+}
+
+
+.sidebar__avatar {
+  width: 2.5rem;
+  height: 2.5rem;
+
+  flex-shrink: 0;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: var(--radius-full);
+
+  color: var(--color-text-inverse);
+  background: var(--color-primary);
+
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+
+  overflow: hidden;
+}
+
+
+.sidebar__avatar img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+
+.sidebar__user-info {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: var(--space-1);
+}
+
+
+.sidebar__user-name {
+  color: var(--color-text-primary);
+
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+.sidebar__user-role {
+  color: var(--color-text-muted);
+
+  font-size: var(--font-size-xs);
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+/* -----------------------------------------
+   DESKTOP LAYOUT
+   ----------------------------------------- */
+
+@media (min-width: 1024px) {
+
+  .sidebar-overlay {
+    display: none;
+  }
+
+  .sidebar {
+    width: var(--sidebar-width);
+
+    transform: translateX(0);
+
+    box-shadow: none;
+  }
+
+  .sidebar__close {
+    display: none;
+  }
+
+  /* Reserve space for sidebar */
+
+  .app-shell {
+    padding-left: var(--sidebar-width);
+  }
+}
+
+
+/* -----------------------------------------
+   LARGE DESKTOP
+   ----------------------------------------- */
+
+@media (min-width: 1440px) {
+
+  .sidebar__nav {
+    padding:
+      var(--space-5)
+      var(--space-4);
+  }
+
+  .sidebar__footer {
+    padding: var(--space-4);
+  }
+}
+
+
+/* -----------------------------------------
+   SMALL MOBILE SCREENS
+   ----------------------------------------- */
+
+@media (max-width: 374px) {
+
+  .sidebar {
+    width: calc(100vw - var(--space-4));
+  }
+
+  .sidebar__brand-subtitle {
+    display: none;
+  }
+}
+
+
+/* -----------------------------------------
+   REDUCED MOTION
+   ----------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .sidebar,
+  .sidebar-overlay,
+  .sidebar__link {
+    transition: none;
+  }
+}
