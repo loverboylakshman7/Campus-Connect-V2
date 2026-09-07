@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- =====================================
+       CAMPUS CONNECT V2
+       MAIN DASHBOARD
+       ===================================== -->
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Campus Connect - Your all-in-one student campus platform."
+  >
+
+  <title>
+    Campus Connect | Dashboard
+  </title>
+
+
+  <!-- =====================================
+       STYLESHEETS
+       ===================================== -->
+
+  <link
+    rel="stylesheet"
+    href="css/main.css"
+  >
+
+</head>
+
+
+<body>
+
+  <!-- =====================================
+       APP WRAPPER
+       ===================================== -->
+
+  <div class="app">
+
+
+    <!-- =====================================
+         SIDEBAR
+         ===================================== -->
+
+    <aside
+      class="sidebar"
+      id="sidebar"
+    >
+
+      <!-- BRAND -->
+
+      <div class="sidebar__brand">
+
+        <a
+          href="index.html"
+          class="brand"
+        >
+
+          <div class="brand__logo">
+            CC
+          </div>
+
+          <div class="brand__text">
+
+            <span class="brand__title">
+              Campus
+            </span>
+
+            <span class="brand__title">
+              Connect
+            </span>
+
+          </div>
+
+        </a>
+
+      </div>
+
+
+      <!-- NAVIGATION -->
+
+      <nav
+        class="sidebar__nav"
+        aria-label="Main navigation"
+      >
+
+        <a
+          href="index.html"
+          class="nav-item nav-item--active"
+        >
+          <span class="nav-item__icon">
+            🏠
+          </span>
+
+          <span class="nav-item__text">
+            Dashboard
+          </span>
+        </a>
+
+
+        <a
+          href="pages/announcements.html"
+          class="nav-item"
+        >
+          <span class="nav-item__icon">
+            📢
+          </span>
+
+          <span class="nav-item__text">
+            Announcements
+          </span>
+        </a>
+
+
+        <a
+          href="pages/assignments.html"
+          class="nav-item"
+        >
+          <span class="nav-item__icon">
+            📝
+          </span>
+
+          <span class="nav-item__text">
+            Assignments
+          </span>
+        </a>
+
+
+        <a
+          href="pages/events.html"
+          class="nav-item"
+        >
+          <span class="nav-item__icon">
+            📅
+          </span>
+
+          <span class="nav-item__text">
+            Events
+          </span>
+        </a>
+
+
+        <a
+          href="pages/timetable.html"
+          class="nav-item"
+        >
+          <span class="nav-item__icon">
+            🗓️
+          </span>
+
+          <span class="nav-item__text">
+            Timetable
+          </span>
+        </a>
+
+      </nav>
+
+
+      <!-- SIDEBAR BOTTOM -->
+
+      <div class="sidebar__bottom">
+
+        <a
+          href="pages/profile.html"
+          class="nav-item"
+        >
+          <span class="nav-item__icon">
+            👤
+          </span>
+
+          <span class="nav-item__text">
+            Profile
+          </span>
+        </a>
+
+
+        <a
+          href="pages/settings.html"
+          class="nav-item"
+        >
+          <span class="nav-item__icon">
+            ⚙️
+          </span>
+
+          <span class="nav-item__text">
+            Settings
+          </span>
+        </a>
+
+      </div>
+
+    </aside>
+
+
+    <!-- =====================================
+         MAIN APPLICATION
+         ===================================== -->
+
+    <div class="app__main">
+
+
+      <!-- =====================================
+           TOP HEADER
+           ===================================== -->
+
+      <header class="topbar">
+
+
+        <!-- MOBILE MENU BUTTON -->
+
+        <button
+          type="button"
+          class="menu-button"
+          aria-label="Open navigation"
+          aria-controls="sidebar"
+          data-sidebar-toggle
+        >
+          ☰
+        </button>
+
+
+        <!-- PAGE TITLE -->
+
+        <div class="topbar__title">
+
+          <h1>
+            Dashboard
+          </h1>
+
+          <p
+            data-current-date
+          >
+            Loading date...
+          </p>
+
+        </div>
+
+
+        <!-- USER AREA -->
+
+        <div class="topbar__user">
+
+          <a
+            href="pages/profile.html"
+            class="user-profile"
+            aria-label="Open profile"
+          >
+
+            <div
+              class="user-profile__avatar"
+              data-user-initials
+            >
+              CC
+            </div>
+
+
+            <div class="user-profile__details">
+
+              <span
+                class="user-profile__name"
+                data-user-name
+              >
+                Student
+              </span>
+
+              <span class="user-profile__role">
+                Student
+              </span>
+
+            </div>
+
+          </a>
+
+        </div>
+
+      </header>
+
+
+      <!-- =====================================
+           DASHBOARD CONTENT
+           ===================================== -->
+
+      <main class="dashboard">
+
+
+        <!-- WELCOME SECTION -->
+
+        <section
+          class="welcome-section"
+        >
+
+          <div>
+
+            <h2
+              data-dashboard-greeting
+            >
+              Welcome!
+            </h2>
+
+            <p>
+              Here's what's happening on your campus today.
+            </p>
+
+          </div>
+
+        </section>
+
+
+        <!-- =====================================
+             STATISTICS
+             ===================================== -->
+
+        <section
+          class="dashboard-stats"
+          aria-label="Campus overview"
+        >
+
+
+          <!-- ANNOUNCEMENTS -->
+
+          <a
+            href="pages/announcements.html"
+            class="stat-card"
+          >
+
+            <div class="stat-card__icon">
+              📢
+            </div>
+
+            <div class="stat-card__content">
+
+              <span
+                class="stat-card__value"
+                data-announcements-count
+              >
+                0
+              </span>
+
+              <span class="stat-card__label">
+                Announcements
+              </span>
+
+            </div>
+
+          </a>
+
+
+          <!-- ASSIGNMENTS -->
+
+          <a
+            href="pages/assignments.html"
+            class="stat-card"
+          >
+
+            <div class="stat-card__icon">
+              📝
+            </div>
+
+            <div class="stat-card__content">
+
+              <span
+                class="stat-card__value"
+                data-assignments-count
+              >
+                0
+              </span>
+
+              <span class="stat-card__label">
+                Assignments
+              </span>
+
+            </div>
+
+          </a>
+
+
+          <!-- EVENTS -->
+
+          <a
+            href="pages/events.html"
+            class="stat-card"
+          >
+
+            <div class="stat-card__icon">
+              📅
+            </div>
+
+            <div class="stat-card__content">
+
+              <span
+                class="stat-card__value"
+                data-events-count
+              >
+                0
+              </span>
+
+              <span class="stat-card__label">
+                Events
+              </span>
+
+            </div>
+
+          </a>
+
+
+          <!-- TIMETABLE -->
+
+          <a
+            href="pages/timetable.html"
+            class="stat-card"
+          >
+
+            <div class="stat-card__icon">
+              🗓️
+            </div>
+
+            <div class="stat-card__content">
+
+              <span
+                class="stat-card__value"
+                data-timetable-count
+              >
+                0
+              </span>
+
+              <span class="stat-card__label">
+                Classes
+              </span>
+
+            </div>
+
+          </a>
+
+        </section>
+
+
+        <!-- =====================================
+             QUICK ACCESS
+             ===================================== -->
+
+        <section class="dashboard-section">
+
+          <div class="section-heading">
+
+            <div>
+
+              <h2>
+                Quick Access
+              </h2>
+
+              <p>
+                Access important campus information quickly.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="quick-access-grid">
+
+
+            <a
+              href="pages/announcements.html"
+              class="quick-access-card"
+            >
+
+              <div class="quick-access-card__icon">
+                📢
+              </div>
+
+              <div>
+
+                <h3>
+                  Announcements
+                </h3>
+
+                <p>
+                  Stay updated with campus news.
+                </p>
+
+              </div>
+
+            </a>
+
+
+            <a
+              href="pages/assignments.html"
+              class="quick-access-card"
+            >
+
+              <div class="quick-access-card__icon">
+                📝
+              </div>
+
+              <div>
+
+                <h3>
+                  Assignments
+                </h3>
+
+                <p>
+                  Track your upcoming work.
+                </p>
+
+              </div>
+
+            </a>
+
+
+            <a
+              href="pages/events.html"
+              class="quick-access-card"
+            >
+
+              <div class="quick-access-card__icon">
+                🎉
+              </div>
+
+              <div>
+
+                <h3>
+                  Events
+                </h3>
+
+                <p>
+                  Explore upcoming campus events.
+                </p>
+
+              </div>
+
+            </a>
+
+
+            <a
+              href="pages/timetable.html"
+              class="quick-access-card"
+            >
+
+              <div class="quick-access-card__icon">
+                📚
+              </div>
+
+              <div>
+
+                <h3>
+                  Timetable
+                </h3>
+
+                <p>
+                  View your class schedule.
+                </p>
+
+              </div>
+
+            </a>
+
+          </div>
+
+        </section>
+
+
+        <!-- =====================================
+             DASHBOARD INFO
+             ===================================== -->
+
+        <section class="dashboard-section">
+
+          <div class="dashboard-info-card">
+
+            <div class="dashboard-info-card__icon">
+              🎓
+            </div>
+
+            <div>
+
+              <h2>
+                Welcome to Campus Connect
+              </h2>
+
+              <p>
+                Your central platform for announcements,
+                assignments, events, and class schedules.
+              </p>
+
+            </div>
+
+          </div>
+
+        </section>
+
+
+      </main>
+
+    </div>
+
+
+  </div>
+
+
+  <!-- =====================================
+       MOBILE SIDEBAR OVERLAY
+       ===================================== -->
+
+  <div
+    class="sidebar-overlay"
+    data-sidebar-overlay
+  ></div>
+
+
+  <!-- =====================================
+       SUPABASE LIBRARY
+       ===================================== -->
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
+  ></script>
+
+
+  <!-- =====================================
+       APPLICATION SCRIPTS
+       ===================================== -->
+
+  <script
+    type="module"
+    src="js/config/supabase.js"
+  ></script>
+
+  <script
+    type="module"
+    src="js/components/header.js"
+  ></script>
+
+  <script
+    type="module"
+    src="js/pages/dashboard.js"
+  ></script>
+
+
+</body>
+</html>
