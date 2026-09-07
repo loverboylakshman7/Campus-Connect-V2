@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- =====================================
+       CAMPUS CONNECT V2
+       TIMETABLE PAGE
+       ===================================== -->
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="View your campus class timetable and today's schedule."
+  >
+
+  <title>
+    Timetable | Campus Connect
+  </title>
+
+
+  <!-- MAIN STYLESHEET -->
+
+  <link
+    rel="stylesheet"
+    href="../css/main.css"
+  >
+
+</head>
+
+
+<body>
+
+
+  <!-- =====================================
+       APPLICATION WRAPPER
+       ===================================== -->
+
+  <div class="app">
+
+
+    <!-- =====================================
+         SIDEBAR
+         ===================================== -->
+
+    <aside
+      class="sidebar"
+      id="sidebar"
+      aria-label="Main navigation"
+    >
+
+
+      <div class="sidebar__header">
+
+        <a
+          href="../index.html"
+          class="brand"
+          aria-label="Campus Connect Dashboard"
+        >
+
+          <div class="brand__logo">
+            CC
+          </div>
+
+          <div class="brand__text">
+
+            <span class="brand__title">
+              Campus
+            </span>
+
+            <span class="brand__title">
+              Connect
+            </span>
+
+          </div>
+
+        </a>
+
+
+        <button
+          type="button"
+          class="sidebar__close"
+          aria-label="Close navigation"
+        >
+          ×
+        </button>
+
+      </div>
+
+
+      <!-- MAIN NAVIGATION -->
+
+      <nav
+        class="sidebar__nav"
+        aria-label="Campus navigation"
+      >
+
+        <a
+          href="../index.html"
+          class="nav-item"
+        >
+          <span class="nav-item__icon">
+            🏠
+          </span>
+
+          <span class="nav-item__text">
+            Dashboard
+          </span>
+        </a>
+
+
+        <a
+          href="announcements.html"
+          class="nav-item"
+        >
+          <span class="nav-item__icon">
+            📢
+          </span>
+
+          <span class="nav-item__text">
+            Announcements
+          </span>
+        </a>
+
+
+        <a
+          href="assignments.html"
+          class="nav-item"
+        >
+          <span class="nav-item__icon">
+            📝
+          </span>
+
+          <span class="nav-item__text">
+            Assignments
+          </span>
+        </a>
+
+
+        <a
+          href="events.html"
+          class="nav-item"
+        >
+          <span class="nav-item__icon">
+            📅
+          </span>
+
+          <span class="nav-item__text">
+            Events
+          </span>
+        </a>
+
+
+        <a
+          href="timetable.html"
+          class="nav-item"
+        >
+          <span class="nav-item__icon">
+            🗓️
+          </span>
+
+          <span class="nav-item__text">
+            Timetable
+          </span>
+        </a>
+
+      </nav>
+
+
+      <!-- SIDEBAR BOTTOM -->
+
+      <div class="sidebar__bottom">
+
+        <a
+          href="profile.html"
+          class="nav-item"
+        >
+          <span class="nav-item__icon">
+            👤
+          </span>
+
+          <span class="nav-item__text">
+            Profile
+          </span>
+        </a>
+
+
+        <a
+          href="settings.html"
+          class="nav-item"
+        >
+          <span class="nav-item__icon">
+            ⚙️
+          </span>
+
+          <span class="nav-item__text">
+            Settings
+          </span>
+        </a>
+
+      </div>
+
+
+    </aside>
+
+
+    <!-- =====================================
+         MAIN APPLICATION
+         ===================================== -->
+
+    <div class="app__main">
+
+
+      <!-- ===================================
+           HEADER
+           =================================== -->
+
+      <header class="header">
+
+
+        <div class="header__left">
+
+          <button
+            type="button"
+            class="header-menu-button"
+            aria-label="Open navigation"
+            aria-controls="sidebar"
+            aria-expanded="false"
+          >
+            ☰
+          </button>
+
+
+          <div class="header__title">
+
+            <h1>
+              Timetable
+            </h1>
+
+            <p>
+              View your weekly class schedule.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="header__actions">
+
+
+          <!-- THEME BUTTON -->
+
+          <button
+            type="button"
+            class="header-theme-button"
+            aria-label="Toggle theme"
+          >
+            🌙
+          </button>
+
+
+          <!-- USER PROFILE -->
+
+          <div class="header-user">
+
+            <button
+              type="button"
+              class="header-user-button"
+              aria-label="Open user menu"
+            >
+
+              <div class="header-user-button__avatar">
+                CC
+              </div>
+
+
+              <div class="header-user-button__details">
+
+                <span class="header-user-button__name">
+                  Student
+                </span>
+
+                <span class="header-user-button__role">
+                  Student
+                </span>
+
+              </div>
+
+
+              <span class="header-user-button__arrow">
+                ▾
+              </span>
+
+            </button>
+
+
+            <div class="header-user-menu">
+
+              <a
+                href="profile.html"
+                class="header-user-menu__item"
+              >
+                👤
+                <span>
+                  Profile
+                </span>
+              </a>
+
+
+              <a
+                href="settings.html"
+                class="header-user-menu__item"
+              >
+                ⚙️
+                <span>
+                  Settings
+                </span>
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+      </header>
+
+
+      <!-- ===================================
+           PAGE CONTENT
+           =================================== -->
+
+      <main class="page-content">
+
+
+        <!-- =================================
+             PAGE INTRO
+             ================================= -->
+
+        <section class="page-heading">
+
+
+          <div class="page-heading__content">
+
+            <div>
+
+              <span class="page-heading__eyebrow">
+                ACADEMIC SCHEDULE
+              </span>
+
+
+              <h2>
+                Your Class Timetable
+              </h2>
+
+
+              <p>
+                View your weekly classes and keep track
+                of today's academic schedule.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="page-heading__actions">
+
+
+            <!-- CLASS COUNT -->
+
+            <div class="page-count">
+
+              <span
+                class="page-count__value"
+                data-timetable-count
+              >
+                0
+              </span>
+
+              <span class="page-count__label">
+                Classes
+              </span>
+
+            </div>
+
+
+            <!-- REFRESH -->
+
+            <button
+              type="button"
+              class="button button--secondary"
+              data-refresh-timetable
+            >
+              <span aria-hidden="true">
+                ↻
+              </span>
+
+              Refresh
+            </button>
+
+
+          </div>
+
+
+        </section>
+
+
+        <!-- =================================
+             TODAY'S CLASSES
+             ================================= -->
+
+        <section
+          class="today-timetable-section"
+          aria-label="Today's classes"
+        >
+
+
+          <div class="section-heading">
+
+            <div>
+
+              <span class="section-heading__eyebrow">
+                TODAY
+              </span>
+
+
+              <h2>
+                <span data-current-day>
+                  Today
+                </span>'s Classes
+              </h2>
+
+            </div>
+
+          </div>
+
+
+          <!-- TODAY'S CLASSES
+               Controlled by timetable.js -->
+
+          <div
+            class="today-timetable-list"
+            data-today-timetable
+          >
+
+            <div class="page-loading-state">
+
+              <div
+                class="loading-spinner"
+                aria-hidden="true"
+              ></div>
+
+              <p>
+                Loading today's classes...
+              </p>
+
+            </div>
+
+          </div>
+
+
+        </section>
+
+
+        <!-- =================================
+             FULL WEEKLY TIMETABLE
+             ================================= -->
+
+        <section
+          class="timetable-section"
+          aria-label="Weekly timetable"
+        >
+
+
+          <div class="section-heading">
+
+            <div>
+
+              <span class="section-heading__eyebrow">
+                WEEKLY SCHEDULE
+              </span>
+
+
+              <h2>
+                Complete Timetable
+              </h2>
+
+
+              <p>
+                Your complete class schedule organised
+                by day.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <!-- FULL TIMETABLE
+               Controlled by timetable.js -->
+
+          <div
+            class="timetable-list"
+            data-timetable-list
+          >
+
+            <div class="page-loading-state">
+
+              <div
+                class="loading-spinner"
+                aria-hidden="true"
+              ></div>
+
+              <p>
+                Loading timetable...
+              </p>
+
+            </div>
+
+          </div>
+
+
+        </section>
+
+
+      </main>
+
+
+    </div>
+
+
+  </div>
+
+
+  <!-- =====================================
+       MOBILE SIDEBAR OVERLAY
+       ===================================== -->
+
+  <div
+    class="sidebar-overlay"
+    aria-hidden="true"
+  ></div>
+
+
+  <!-- =====================================
+       SUPABASE
+       ===================================== -->
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
+  ></script>
+
+
+  <!-- =====================================
+       APPLICATION JAVASCRIPT
+       ===================================== -->
+
+  <script
+    type="module"
+    src="../js/config/supabase.js"
+  ></script>
+
+
+  <script
+    type="module"
+    src="../js/components/header.js"
+  ></script>
+
+
+  <script
+    type="module"
+    src="../js/pages/timetable.js"
+  ></script>
+
+
+</body>
+</html>

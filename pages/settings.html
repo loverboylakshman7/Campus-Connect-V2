@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- =====================================
+       CAMPUS CONNECT V2
+       SETTINGS PAGE
+       ===================================== -->
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Manage your Campus Connect preferences and account settings."
+  >
+
+  <title>
+    Settings | Campus Connect
+  </title>
+
+
+  <!-- MAIN STYLESHEET -->
+
+  <link
+    rel="stylesheet"
+    href="../css/main.css"
+  >
+
+</head>
+
+
+<body>
+
+
+  <!-- =====================================
+       APPLICATION WRAPPER
+       ===================================== -->
+
+  <div class="app">
+
+
+    <!-- =====================================
+         SIDEBAR
+         ===================================== -->
+
+    <aside
+      class="sidebar"
+      id="sidebar"
+      aria-label="Main navigation"
+    >
+
+
+      <div class="sidebar__header">
+
+        <a
+          href="../index.html"
+          class="brand"
+          aria-label="Campus Connect Dashboard"
+        >
+
+          <div class="brand__logo">
+            CC
+          </div>
+
+
+          <div class="brand__text">
+
+            <span class="brand__title">
+              Campus
+            </span>
+
+            <span class="brand__title">
+              Connect
+            </span>
+
+          </div>
+
+        </a>
+
+
+        <button
+          type="button"
+          class="sidebar__close"
+          aria-label="Close navigation"
+        >
+          ×
+        </button>
+
+      </div>
+
+
+      <!-- MAIN NAVIGATION -->
+
+      <nav
+        class="sidebar__nav"
+        aria-label="Campus navigation"
+      >
+
+
+        <a
+          href="../index.html"
+          class="nav-item"
+        >
+          <span class="nav-item__icon">
+            🏠
+          </span>
+
+          <span class="nav-item__text">
+            Dashboard
+          </span>
+        </a>
+
+
+        <a
+          href="announcements.html"
+          class="nav-item"
+        >
+          <span class="nav-item__icon">
+            📢
+          </span>
+
+          <span class="nav-item__text">
+            Announcements
+          </span>
+        </a>
+
+
+        <a
+          href="assignments.html"
+          class="nav-item"
+        >
+          <span class="nav-item__icon">
+            📝
+          </span>
+
+          <span class="nav-item__text">
+            Assignments
+          </span>
+        </a>
+
+
+        <a
+          href="events.html"
+          class="nav-item"
+        >
+          <span class="nav-item__icon">
+            📅
+          </span>
+
+          <span class="nav-item__text">
+            Events
+          </span>
+        </a>
+
+
+        <a
+          href="timetable.html"
+          class="nav-item"
+        >
+          <span class="nav-item__icon">
+            🗓️
+          </span>
+
+          <span class="nav-item__text">
+            Timetable
+          </span>
+        </a>
+
+
+      </nav>
+
+
+      <!-- SIDEBAR BOTTOM -->
+
+      <div class="sidebar__bottom">
+
+
+        <a
+          href="profile.html"
+          class="nav-item"
+        >
+          <span class="nav-item__icon">
+            👤
+          </span>
+
+          <span class="nav-item__text">
+            Profile
+          </span>
+        </a>
+
+
+        <a
+          href="settings.html"
+          class="nav-item"
+        >
+          <span class="nav-item__icon">
+            ⚙️
+          </span>
+
+          <span class="nav-item__text">
+            Settings
+          </span>
+        </a>
+
+
+      </div>
+
+
+    </aside>
+
+
+    <!-- =====================================
+         MAIN APPLICATION
+         ===================================== -->
+
+    <div class="app__main">
+
+
+      <!-- ===================================
+           HEADER
+           =================================== -->
+
+      <header class="header">
+
+
+        <div class="header__left">
+
+
+          <!-- MOBILE MENU -->
+
+          <button
+            type="button"
+            class="header-menu-button"
+            aria-label="Open navigation"
+            aria-controls="sidebar"
+            aria-expanded="false"
+          >
+            ☰
+          </button>
+
+
+          <div class="header__title">
+
+            <h1>
+              Settings
+            </h1>
+
+            <p>
+              Manage your preferences and account.
+            </p>
+
+          </div>
+
+
+        </div>
+
+
+        <!-- HEADER ACTIONS -->
+
+        <div class="header__actions">
+
+
+          <!-- THEME BUTTON -->
+
+          <button
+            type="button"
+            class="header-theme-button"
+            aria-label="Toggle theme"
+            aria-pressed="false"
+          >
+            🌙
+          </button>
+
+
+          <!-- USER MENU -->
+
+          <div class="header-user">
+
+
+            <button
+              type="button"
+              class="header-user-button"
+              aria-label="Open user menu"
+              aria-expanded="false"
+            >
+
+              <div class="header-user-button__avatar">
+                CC
+              </div>
+
+
+              <div class="header-user-button__details">
+
+                <span class="header-user-button__name">
+                  Student
+                </span>
+
+                <span class="header-user-button__role">
+                  Student
+                </span>
+
+              </div>
+
+
+              <span
+                class="header-user-button__arrow"
+                aria-hidden="true"
+              >
+                ▾
+              </span>
+
+            </button>
+
+
+            <div
+              class="header-user-menu"
+              aria-hidden="true"
+            >
+
+              <a
+                href="profile.html"
+                class="header-user-menu__item"
+              >
+                👤
+
+                <span>
+                  Profile
+                </span>
+              </a>
+
+
+              <a
+                href="settings.html"
+                class="header-user-menu__item"
+              >
+                ⚙️
+
+                <span>
+                  Settings
+                </span>
+              </a>
+
+
+            </div>
+
+
+          </div>
+
+
+        </div>
+
+
+      </header>
+
+
+      <!-- ===================================
+           PAGE CONTENT
+           =================================== -->
+
+      <main class="page-content">
+
+
+        <!-- PAGE INTRO -->
+
+        <section class="page-heading">
+
+          <div class="page-heading__content">
+
+            <div>
+
+              <span class="page-heading__eyebrow">
+                PREFERENCES
+              </span>
+
+
+              <h2>
+                Application Settings
+              </h2>
+
+
+              <p>
+                Customize how Campus Connect looks
+                and works for you.
+              </p>
+
+            </div>
+
+          </div>
+
+        </section>
+
+
+        <!-- =================================
+             SETTINGS SECTION
+             ================================= -->
+
+        <section class="settings-section">
+
+
+          <!-- =================================
+               APPEARANCE SETTINGS
+               ================================= -->
+
+          <div class="settings-card">
+
+
+            <div class="settings-card__header">
+
+              <div>
+
+                <span class="settings-card__icon">
+                  🎨
+                </span>
+
+
+                <div>
+
+                  <h2>
+                    Appearance
+                  </h2>
+
+                  <p>
+                    Customize the appearance of Campus Connect.
+                  </p>
+
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <!-- THEME SETTING -->
+
+            <div class="settings-item">
+
+
+              <div class="settings-item__content">
+
+                <h3>
+                  Theme
+                </h3>
+
+                <p>
+                  Choose how Campus Connect appears
+                  on your device.
+                </p>
+
+              </div>
+
+
+              <div class="settings-item__control">
+
+                <select
+                  id="theme-setting"
+                  name="theme"
+                  aria-label="Select theme"
+                >
+
+                  <option value="system">
+                    System Default
+                  </option>
+
+                  <option value="light">
+                    Light
+                  </option>
+
+                  <option value="dark">
+                    Dark
+                  </option>
+
+                </select>
+
+              </div>
+
+
+            </div>
+
+
+          </div>
+
+
+          <!-- =================================
+               NOTIFICATION SETTINGS
+               ================================= -->
+
+          <div class="settings-card">
+
+
+            <div class="settings-card__header">
+
+              <div>
+
+                <span class="settings-card__icon">
+                  🔔
+                </span>
+
+
+                <div>
+
+                  <h2>
+                    Notifications
+                  </h2>
+
+                  <p>
+                    Control notification preferences.
+                  </p>
+
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <!-- NOTIFICATIONS TOGGLE -->
+
+            <div class="settings-item">
+
+
+              <div class="settings-item__content">
+
+                <h3>
+                  Enable Notifications
+                </h3>
+
+                <p>
+                  Receive important updates and campus
+                  announcements.
+                </p>
+
+              </div>
+
+
+              <div class="settings-item__control">
+
+                <label
+                  class="toggle-switch"
+                  for="notifications-setting"
+                >
+
+                  <input
+                    id="notifications-setting"
+                    type="checkbox"
+                  >
+
+                  <span
+                    class="toggle-switch__slider"
+                  ></span>
+
+                </label>
+
+              </div>
+
+
+            </div>
+
+
+          </div>
+
+
+          <!-- =================================
+               ACCOUNT SETTINGS
+               ================================= -->
+
+          <div class="settings-card">
+
+
+            <div class="settings-card__header">
+
+              <div>
+
+                <span class="settings-card__icon">
+                  👤
+                </span>
+
+
+                <div>
+
+                  <h2>
+                    Account
+                  </h2>
+
+                  <p>
+                    Manage your Campus Connect session.
+                  </p>
+
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <!-- PROFILE LINK -->
+
+            <div class="settings-item">
+
+
+              <div class="settings-item__content">
+
+                <h3>
+                  Profile Information
+                </h3>
+
+                <p>
+                  View and update your personal information.
+                </p>
+
+              </div>
+
+
+              <div class="settings-item__control">
+
+                <a
+                  href="profile.html"
+                  class="button button--secondary"
+                >
+                  View Profile
+                </a>
+
+              </div>
+
+
+            </div>
+
+
+            <!-- LOGOUT -->
+
+            <div
+              class="settings-item settings-item--danger"
+            >
+
+
+              <div class="settings-item__content">
+
+                <h3>
+                  Sign Out
+                </h3>
+
+                <p>
+                  Sign out from your Campus Connect account
+                  on this device.
+                </p>
+
+              </div>
+
+
+              <div class="settings-item__control">
+
+                <button
+                  type="button"
+                  class="button button--danger"
+                  data-logout
+                >
+                  Sign Out
+                </button>
+
+              </div>
+
+
+            </div>
+
+
+          </div>
+
+
+        </section>
+
+
+      </main>
+
+
+    </div>
+
+
+  </div>
+
+
+  <!-- =====================================
+       MOBILE SIDEBAR OVERLAY
+       ===================================== -->
+
+  <div
+    class="sidebar-overlay"
+    aria-hidden="true"
+  ></div>
+
+
+  <!-- =====================================
+       SUPABASE
+       ===================================== -->
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
+  ></script>
+
+
+  <!-- =====================================
+       APPLICATION JAVASCRIPT
+       ===================================== -->
+
+  <script
+    type="module"
+    src="../js/config/supabase.js"
+  ></script>
+
+
+  <script
+    type="module"
+    src="../js/components/header.js"
+  ></script>
+
+
+  <script
+    type="module"
+    src="../js/pages/settings.js"
+  ></script>
+
+
+</body>
+</html>
